@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {}
+    "D:\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {}
   },
   "projects": {
-    "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {
+    "D:\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
+        "projectUniqueName": "D:\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
         "projectName": "ImageGallery.Client",
-        "projectPath": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
+        "projectPath": "D:\\ImageGallery\\src\\ImageGallery.Client\\ImageGallery.Client.csproj",
         "packagesPath": "C:\\Users\\sachi\\.nuget\\packages\\",
-        "outputPath": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Client\\obj\\",
+        "outputPath": "D:\\ImageGallery\\src\\ImageGallery.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp2.0": {
             "projectReferences": {
-              "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
-                "projectPath": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj"
+              "D:\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
+                "projectPath": "D:\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
+    "D:\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
+        "projectUniqueName": "D:\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
         "projectName": "ImageGallery.Model",
-        "projectPath": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
+        "projectPath": "D:\\ImageGallery\\src\\ImageGallery.Model\\ImageGallery.Model.csproj",
         "packagesPath": "C:\\Users\\sachi\\.nuget\\packages\\",
-        "outputPath": "D:\\Pluralsight Courses\\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\\CODE\\SecuringAspNetCore2WithOAuth2AndOIDC\\Starter Files\\ImageGallery\\src\\ImageGallery.Model\\obj\\",
+        "outputPath": "D:\\ImageGallery\\src\\ImageGallery.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

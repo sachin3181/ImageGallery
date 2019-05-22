@@ -7,3 +7,12 @@ D:\Pluralsight Courses\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by
 D:\Pluralsight Courses\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\CODE\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.AssemblyInfo.cs
 D:\Pluralsight Courses\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\CODE\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.dll
 D:\Pluralsight Courses\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\CODE\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.pdb
+D:\ImageGallery\src\ImageGallery.Model\bin\Debug\netcoreapp2.0\ImageGallery.Model.deps.json
+D:\ImageGallery\src\ImageGallery.Model\bin\Debug\netcoreapp2.0\ImageGallery.Model.dll
+D:\ImageGallery\src\ImageGallery.Model\bin\Debug\netcoreapp2.0\ImageGallery.Model.pdb
+D:\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.csprojAssemblyReference.cache
+D:\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.csproj.CoreCompileInputs.cache
+D:\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.AssemblyInfoInputs.cache
+D:\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.AssemblyInfo.cs
+D:\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.dll
+D:\ImageGallery\src\ImageGallery.Model\obj\Debug\netcoreapp2.0\ImageGallery.Model.pdb
