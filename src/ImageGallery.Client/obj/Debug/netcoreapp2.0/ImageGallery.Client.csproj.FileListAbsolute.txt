@@ -1,0 +1,1 @@
+D:\Pluralsight Courses\Securing ASP.NET Core 2 with OAuth2 and OpenID Connect by Kevin Dockx\CODE\SecuringAspNetCore2WithOAuth2AndOIDC\Starter Files\ImageGallery\src\ImageGallery.Client\obj\Debug\netcoreapp2.0\ImageGallery.Client.csprojAssemblyReference.cache
