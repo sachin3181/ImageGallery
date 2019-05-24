@@ -70,6 +70,7 @@ namespace ImageGallery.Client
                   options.Scope.Add("imagegalleryapi");
                   options.Scope.Add("country");
                   options.Scope.Add("subscriptionlevel");
+                  options.Scope.Add("offline_access");
                   options.SaveTokens = true;
                   options.ClientSecret = "secret";
                   options.GetClaimsFromUserInfoEndpoint = true;
