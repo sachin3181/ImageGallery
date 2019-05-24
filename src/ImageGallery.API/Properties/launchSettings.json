@@ -3,21 +3,14 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:1601/",
-      "sslPort": 0
+      "applicationUrl": "https://localhost:44365/",
+      "sslPort": 44365
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "ImageGallery.API": {
-      "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

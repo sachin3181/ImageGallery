@@ -1,5 +1,8 @@
-﻿using ImageGallery.API.Entities;
+﻿using IdentityServer4.AccessTokenValidation;
+using ImageGallery.API.Authorization;
+using ImageGallery.API.Entities;
 using ImageGallery.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,13 +21,33 @@ namespace ImageGallery.API
         {
             Configuration = configuration;
         }
-        
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-             services.AddMvc();
-        
+            services.AddMvc();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(
+                    "MustOwnImage",
+                    policyBuilder =>
+                    {
+                        policyBuilder.RequireAuthenticatedUser();
+                        policyBuilder.AddRequirements(new MustOwnImageRequirement());
+                    });
+            });
+
+            services.AddScoped<IAuthorizationHandler, MustOwnImageHandler>();
+
+            services.AddAuthentication(
+                IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "https://localhost:44337/";
+                    options.ApiName = "imagegalleryapi";
+                });
             // register the DbContext on the container, getting the connection string from
             // appSettings (note: use this during development; in a production environment,
             // it's better to store the connection string in an environment variable)
@@ -36,7 +59,7 @@ namespace ImageGallery.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
             ILoggerFactory loggerFactory, GalleryContext galleryContext)
         {
             if (env.IsDevelopment())
@@ -56,6 +79,7 @@ namespace ImageGallery.API
                 });
             }
 
+            app.UseAuthentication();
             app.UseStaticFiles();
 
             AutoMapper.Mapper.Initialize(cfg =>
@@ -78,9 +102,9 @@ namespace ImageGallery.API
                     .ForMember(m => m.OwnerId, options => options.Ignore());
             });
 
-            AutoMapper.Mapper.AssertConfigurationIsValid();            
+            AutoMapper.Mapper.AssertConfigurationIsValid();
 
-            app.UseMvc(); 
+            app.UseMvc();
         }
     }
 }

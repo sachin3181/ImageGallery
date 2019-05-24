@@ -1,4 +1,5 @@
-﻿using ImageGallery.Client.Services;
+﻿using IdentityModel;
+using ImageGallery.Client.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace ImageGallery.Client
@@ -26,6 +28,18 @@ namespace ImageGallery.Client
             // Add framework services.
             services.AddMvc();
 
+            services.AddAuthorization(authorizationOptions =>
+            {
+                authorizationOptions.AddPolicy(
+                    "CanOrderFrame",
+                    policyBuilder =>
+                    {
+                        policyBuilder.RequireAuthenticatedUser();
+                        policyBuilder.RequireClaim("country", "be");
+                        policyBuilder.RequireClaim("subscriptionlevel", "PayingUser");
+                    });
+            });
+
             // register an IHttpContextAccessor so we can access the current
             // HttpContext in services by injecting it
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -38,7 +52,10 @@ namespace ImageGallery.Client
                 options.DefaultScheme = "Cookies";
                 options.DefaultChallengeScheme = "oidc";
 
-            }).AddCookie("Cookies")
+            }).AddCookie("Cookies",(options) =>
+            {
+                options.AccessDeniedPath = "/Authorization/AccessDenied";
+            })
               .AddOpenIdConnect("oidc", options =>
               {
                   options.SignInScheme = "Cookies";
@@ -49,13 +66,25 @@ namespace ImageGallery.Client
                   options.Scope.Add("openid");
                   options.Scope.Add("profile");
                   options.Scope.Add("address");
+                  options.Scope.Add("roles");
+                  options.Scope.Add("imagegalleryapi");
+                  options.Scope.Add("country");
+                  options.Scope.Add("subscriptionlevel");
                   options.SaveTokens = true;
                   options.ClientSecret = "secret";
                   options.GetClaimsFromUserInfoEndpoint = true;
                   options.ClaimActions.Remove("amr");
                   options.ClaimActions.DeleteClaim("sid");
                   options.ClaimActions.DeleteClaim("idp");
-                  options.ClaimActions.DeleteClaim("address");
+                  //options.ClaimActions.DeleteClaim("address");
+                  options.ClaimActions.MapUniqueJsonKey("role", "role");
+                  options.ClaimActions.MapUniqueJsonKey("country", "country");
+                  options.ClaimActions.MapUniqueJsonKey("subscriptionlevel", "subscriptionlevel");
+                  options.TokenValidationParameters = new TokenValidationParameters
+                  {
+                      NameClaimType = JwtClaimTypes.GivenName,
+                      RoleClaimType = JwtClaimTypes.Role
+                  };
               });
         }
 
